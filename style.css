@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #263b31;
+    background: #f6f7f1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+#app {
+    min-height: 100vh;
+}
+
+.loading {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: #527760;
+}
+
+header {
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px #00000008;
+}
+
+.brand {
+    color: #527760;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 40px auto;
+}
+
+.hero {
+    background: #e5eee4;
+    padding: 45px;
+    border-radius: 24px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 44px);
+    margin: 0 0 12px;
+}
+
+.hero p {
+    color: #65776a;
+    line-height: 1.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px #24382c0b;
+    border: 1px solid #e8ece5;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #42654d;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 7px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce4db;
+    border-radius: 10px;
+    background: #fcfdfb;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #6b9877;
+    box-shadow: 0 0 0 3px #6b98771c;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 17px;
+    font-weight: 600;
+}
+
+.primary {
+    background: #527760;
+    color: white;
+}
+
+.primary:hover {
+    background: #3e614b;
+}
+
+.secondary {
+    background: #e8f0e6;
+    color: #42654d;
+}
+
+.full-button {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.tabs button {
+    flex: 1;
+    background: #eef2eb;
+    color: #527760;
+}
+
+.tabs button.active {
+    background: #527760;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.message {
+    background: #fff3dc;
+    color: #815c25;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 14px;
+    font-size: 13px;
+}
+
+.message.error {
+    background: #fff0ed;
+    color: #a23d31;
+}
+
+.message.success {
+    background: #e7f5e9;
+    color: #356744;
+}
+
+.preview {
+    background: #fbfcf8;
+    border: 1px solid #e1e8de;
+    padding: 24px;
+    border-radius: 14px;
+    min-height: 250px;
+    overflow-wrap: anywhere;
+}
+
+.preview h2 {
+    font-size: 28px;
+}
+
+.preview h3 {
+    color: #527760;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.preview p {
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+.skill {
+    display: inline-block;
+    background: #e7f0e5;
+    color: #42654d;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin: 4px;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #879289;
+    font-size: 13px;
+}
+
+@media (max-width: 760px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 28px;
+    }
+
+    header {
+        padding: 15px 4%;
+    }
+
+    .container {
+        margin-top: 25px;
+    }
+}
+
+@media print {
+    header,
+    .hero,
+    .form-card,
+    .no-print,
+    footer {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .preview-card {
+        border: none;
+        box-shadow: none;
+    }
+
+    .preview {
+        border: none;
+    }
+}
